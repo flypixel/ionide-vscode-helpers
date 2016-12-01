@@ -11,8 +11,11 @@
   "bugs": {
     "url": "https://github.com/ionide/ionide-vscode-helpers/issues"
   },
+  "scripts": {
+    "build": "fable ./Ionide.Helpers.fsproj -s -o ./release/ -m commonjs --verbose"
+  },
   "homepage": "https://github.com/ionide/ionide-vscode-helpers#readme",
   "dependencies": {
-    "fable-core": "^0.1.8"
+    "fable-core": "*"
   }
 }

@@ -16,6 +16,7 @@ module Promise =
     open Fable.Core
     open Fable.Import
     open Fable.Import.JS
+    open Fable.Core.JsInterop
 
     let success (a : 'T -> 'R) (pr : Promise<'T>) : Promise<'R> =
         pr?``then`` $ a |> unbox
@@ -62,6 +63,7 @@ module Process =
     open Fable.Import.JS
     open Fable.Import.Node
     open Fable.Import.vscode
+    open Fable.Core.JsInterop
 
 
     let isWin () = ``process``.platform = "win32"
